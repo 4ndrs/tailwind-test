@@ -1,6 +1,6 @@
 const Note = () => (
   <main className="flex h-screen w-screen items-center justify-center">
-    <article className="w-60 rounded-lg bg-sky-200">
+    <article className="w-60 rounded-lg bg-sky-200 transition-shadow duration-300 hover:shadow-md">
       <h1 className="px-4 pt-3 text-base font-medium">すなわち、僕だぜ！</h1>
       <p className="px-4 pb-3 pt-3 text-sm">
         Phone:
