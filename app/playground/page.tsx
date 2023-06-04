@@ -13,18 +13,35 @@ const Playground = () => (
     </button>
 
     <List />
+    <Table />
   </main>
 );
 
 const people = [
-  { name: "Kristen Ramos", email: "kristen.ramos@example.com", img: Kristen },
-  { name: "Floyd Miles", email: "floyd.miles@example.com", img: Floyd },
+  {
+    name: "Kristen Ramos",
+    title: "Regional Pradigm Technician",
+    email: "kristen.ramos@example.com",
+    img: Kristen,
+  },
+  {
+    name: "Floyd Miles",
+    title: "Product Directives Officer",
+    email: "floyd.miles@example.com",
+    img: Floyd,
+  },
   {
     name: "Courtney Henry",
+    title: "Senior Designer",
     email: "courtney.henry@example.com",
     img: Courtney,
   },
-  { name: "Ted Fox", email: "ted.fox@example.com", img: Ted },
+  {
+    name: "Ted Fox",
+    title: "VP, Hardware Engineering",
+    email: "ted.fox@example.com",
+    img: Ted,
+  },
 ];
 
 const List = () => (
@@ -39,6 +56,39 @@ const List = () => (
       </li>
     ))}
   </ul>
+);
+
+const Table = () => (
+  <table className="w-[60rem]">
+    <thead className="border-b border-slate-200 bg-slate-50">
+      <tr>
+        <th className="px-6 py-3 text-left text-sm font-medium text-slate-900">
+          Name
+        </th>
+        <th className="px-6 py-3 text-left text-sm font-medium text-slate-900">
+          Title
+        </th>
+        <th className="px-6 py-3 text-left text-sm font-medium text-slate-900">
+          Email
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      {people.map((person) => (
+        <tr key={person.name} className="odd:bg-white even:bg-slate-50">
+          <td className="whitespace-nowrap px-6 py-4 text-sm font-medium text-slate-900">
+            {person.name}
+          </td>
+          <td className="whitespace-nowrap px-6 py-4 text-sm text-slate-600">
+            {person.title}
+          </td>
+          <td className="whitespace-nowrap px-6 py-4 text-sm text-slate-600">
+            {person.email}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
 );
 
 export default Playground;
