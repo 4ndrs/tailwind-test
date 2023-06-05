@@ -15,6 +15,8 @@ const Playground = () => (
     <List />
     <Table />
     <List2 />
+    <Quote />
+    <Quote2 />
   </main>
 );
 
@@ -130,6 +132,27 @@ const List2 = () => (
       </li>
     ))}
   </ul>
+);
+
+const Quote = () => (
+  <blockquote className="text-center text-2xl font-semibold italic text-slate-900">
+    When you look{" "}
+    <span className="relative inline-block before:absolute before:-inset-1 before:block before:-skew-y-3 before:bg-pink-500">
+      <span className="relative text-white">annoyed</span>
+    </span>{" "}
+    all the time, people think that you&apos;re busy.
+  </blockquote>
+);
+
+const Quote2 = () => (
+  <blockquote className="text-center text-2xl font-semibold italic text-slate-900">
+    When you look{" "}
+    <span className="relative">
+      <span aria-hidden className="absolute -inset-1 -skew-y-3 bg-pink-500" />
+      <span className="relative text-white">annoyed</span>
+    </span>{" "}
+    all the time, people think that you&apos;re busy.
+  </blockquote>
 );
 
 export default Playground;
