@@ -17,6 +17,7 @@ const Playground = () => (
     <List2 />
     <Quote />
     <Quote2 />
+    <Search />
   </main>
 );
 
@@ -153,6 +154,27 @@ const Quote2 = () => (
     </span>{" "}
     all the time, people think that you&apos;re busy.
   </blockquote>
+);
+
+const Search = () => (
+  <label className="relative block">
+    <span className="sr-only">Search</span>
+    <span className="absolute inset-y-0 left-0 flex items-center pl-2">
+      <svg viewBox="0 0 20 20" className="h-5 w-5 fill-slate-300">
+        <path
+          fillRule="evenodd"
+          d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+          clipRule="evenodd"
+        />
+      </svg>
+    </span>
+    <input
+      placeholder="Search for anything..."
+      type="text"
+      name="search"
+      className="block w-full rounded-md border border-slate-300 bg-white py-2 pl-9 pr-3 shadow-sm placeholder:italic placeholder:text-slate-400 focus:border-sky-500 focus:outline-none focus:ring-1 sm:text-sm"
+    />
+  </label>
 );
 
 export default Playground;
