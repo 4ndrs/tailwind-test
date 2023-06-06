@@ -18,6 +18,7 @@ const Playground = () => (
     <Quote />
     <Quote2 />
     <Search />
+    <DarkLightCard />
   </main>
 );
 
@@ -175,6 +176,36 @@ const Search = () => (
       className="block w-full rounded-md border border-slate-300 bg-white py-2 pl-9 pr-3 shadow-sm placeholder:italic placeholder:text-slate-400 focus:border-sky-500 focus:outline-none focus:ring-1 sm:text-sm"
     />
   </label>
+);
+
+const DarkLightCard = () => (
+  <div className="rounded-lg bg-white px-6 py-8 shadow-xl ring-1 ring-slate-900/5 dark:bg-slate-900">
+    <div>
+      <span className="inline-flex items-center justify-center rounded-md bg-indigo-500 p-2 shadow-lg">
+        <svg
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          aria-hidden
+          className="h-6 w-6 text-white"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+          />
+        </svg>
+      </span>
+    </div>
+    <h3 className="mt-5 text-base font-medium tracking-tight text-slate-900 dark:text-white">
+      Writes Upside-Down
+    </h3>
+    <p className="mt-2 text-sm text-slate-500 dark:text-slate-400">
+      The Zero Gravity Pen can be used to write in any orientation, including
+      upside-down. It even works in outer space.
+    </p>
+  </div>
 );
 
 export default Playground;
